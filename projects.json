@@ -1,0 +1,73 @@
+{
+  "projects": [
+    {
+      "slug": "stu-hub",
+      "name": "Students Hub للخدمات الطلابية",
+      "description": "مشروع استيودنت هب هو مشروع يسعى لمساعدة الطلاب وتوفير وقتهم وجهدهم",
+      "link": "https://stu-hub.aden-developers.org/",
+      "featureImage": "subdomians/stu-hub/desktop/1.png",
+      "images": {
+        "mobile": [],
+        "desktop": [],
+        "admin": []
+      }
+    },
+    {
+      "slug": "aden-guide",
+      "name": "Aden Guide دليلك في عدن",
+      "description": "دليلك الإلكتروني للعثور على آخر الأخبار، الخدمات، المحلات، والأنشطة التجارية في محافظة عدن - اليمن.",
+      "link": "https://aden-guide.aden-developers.org/",
+      "featureImage": "subdomians/aden-guide/desktop/Computer1.jpeg",
+      "images": {
+        "mobile": [],
+        "desktop": [],
+        "admin": []
+      }
+    },
+    {
+      "slug": "aden-tourist-guide",
+      "name": "Aden Tourist Guide دليل عدن السياحي",
+      "description": "كل ما تحتاجه للتعرف على عدن تجده هنا",
+      "link": "https://atg.aden-developers.org/",
+      "featureImage": "subdomians/aden-tourist-guide/desktop/1.jpeg",
+      "images": {
+        "desktop": [],
+        "mobile": [],
+        "admin": []
+      }
+    },
+    {
+      "slug": "link4job",
+      "name": "Link4Job",
+      "description": "Link4job هو دليلك الأمثل لأقرب فرص العمل وأفضل الوظائف المتاحة في الوطن العربي.",
+      "link": "https://abdulhmid.aden-developers.org/",
+      "featureImage": "subdomians/Link4job/desktop/1.jpeg",
+      "images": {
+        "desktop": [],
+        "mobile": []
+      }
+    },
+    {
+      "slug": "arab-heritage-key",
+      "name": "Arab Heritage key مفتاح التراث العربي",
+      "description": "انقر لزيارة الخريطة واستكشاف معالم الوطن العربي",
+      "link": "https://arab-heritage-key.aden-developers.org/",
+      "featureImage": "subdomians/arab-heritage-key/desktop/1.jpeg",
+      "images": {
+        "desktop": [],
+        "mobile": []
+      }
+    },
+    {
+      "slug": "pms",
+      "name": "PMS (Project Manager System)",
+      "description": "تنظيم المشاريع مع الفرق بسهولة تحت مبدء ايجايل Agile.",
+      "link": "https://pms.aden-developers.org/",
+      "featureImage": "subdomians/pms/1.jpeg",
+      "images": {
+        "desktop": [],
+        "mobile": []
+      }
+    }
+  ]
+}

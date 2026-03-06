@@ -1,0 +1,103 @@
+:root {
+  --brand: #5aa7ff; /* light blue */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand: #7bb7ff;
+  }
+}
+
+html,
+body {
+  font-family: "Cairo", "Tajawal", "Inter", system-ui, -apple-system, Segoe UI,
+    Roboto, Helvetica, Arial, sans-serif;
+  direction: rtl;
+}
+
+/* Ensure explicit centering works even with RTL */
+.text-center {
+  text-align: center !important;
+}
+
+.text-primary {
+  color: var(--brand) !important;
+}
+.btn-primary {
+  --bs-btn-bg: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-bg: #3f97ff;
+  --bs-btn-hover-border-color: #3f97ff;
+}
+.btn-outline-primary {
+  --bs-btn-color: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-bg: var(--brand);
+  --bs-btn-hover-border-color: var(--brand);
+}
+
+.bg-hero {
+  background: linear-gradient(180deg, rgba(90, 167, 255, 0.1), transparent 60%);
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 180px;
+}
+
+/* Dark mode support via data attribute toggle */
+[data-bs-theme="dark"] .bg-hero {
+  background: linear-gradient(
+    180deg,
+    rgba(123, 183, 255, 0.12),
+    transparent 60%
+  );
+}
+
+/* Utility spacing larger than default */
+.py-lg-6 {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+
+/* Carousel images */
+.carousel-item img {
+  object-fit: contain;
+  width: 100%;
+  max-height: 75vh;
+  background: var(--bs-body-bg);
+}
+
+/* Make carousel arrows highly visible */
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1; /* always fully visible */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+  background-size: 60% 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6); /* dark translucent pill behind arrow */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon,
+.carousel-control-prev:focus .carousel-control-prev-icon,
+.carousel-control-next:focus .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* Larger image area inside the images modal */
+#imagesModal .modal-body {
+  padding: 0;
+}
+
+#imagesModal .carousel-item img {
+  max-height: 90vh;
+}
