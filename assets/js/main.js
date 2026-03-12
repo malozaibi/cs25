@@ -93,12 +93,15 @@
             encodeURI(p.link) +
             '">فتح الموقع</a></div>'
           : "") +
-        '<p class="mb-1">صور الموقع:</p><div class="mt-auto d-flex flex-wrap gap-2 image-buttons-container">' +
+        // '<p class="mb-1">صور الموقع:</p>'
+        +'<div class="mt-auto d-flex flex-wrap gap-2 image-buttons-container">' +
         "</div>" +
         "</div>";
 
       // Dynamically add buttons only for categories that have images
-      const imageButtonsContainer = card.querySelector(".image-buttons-container");
+      const imageButtonsContainer = card.querySelector(
+        ".image-buttons-container"
+      );
       if (imageButtonsContainer) {
         const buttonLabels = {
           mobile: "الموبايل",
@@ -107,7 +110,11 @@
         };
         const images = p.images || {};
         Object.keys(buttonLabels).forEach(function (group) {
-          if (images[group] && Array.isArray(images[group]) && images[group].length > 0) {
+          if (
+            images[group] &&
+            Array.isArray(images[group]) &&
+            images[group].length > 0
+          ) {
             const btn = document.createElement("button");
             btn.className = "btn btn-sm btn-outline-primary";
             btn.setAttribute("data-group", group);
