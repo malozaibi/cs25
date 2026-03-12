@@ -68,6 +68,18 @@
         "desktop": [],
         "mobile": []
       }
+    },
+    {
+      "slug": "YW",
+      "name": "introdution to some games",
+      "description": "blah blah for testing ",
+      "link": "https://cs25/yosef waddah.aden-developers.org/",
+      "featureImage": "subdomians/yosef waddah/h.png",
+      "images": {
+        "desktop": [],
+        "mobile": [],
+        "admin": []
+      }
     }
   ]
 }

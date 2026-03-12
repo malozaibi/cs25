@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hollow Knight: Silksong</title>
+  <link rel="stylesheet" href="HKSS.CSS">
+</head>
+<body>
+  <header>
+    <img src="Header with image.png" alt="">
+    <h1>Hollow Knight: Silksong</h1>
+    <Button id="sound">try</Button>
+    <nav>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#the-knight">The Knight</a></li>
+        <li><a href="#graphic-story">Graphic Story</a></li>
+        <li><a href="#play-now">Play Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="introduction" class="text-image">
+  <img src="hollow-knight-cover-image 1.png" alt="Hornet" class="section-img">
+  <div>
+    <h2>Introduction</h2>
+    <p>Hollow Knight: Silksong is the epic sequel to the famous game Hollow Knight, an action-adventure Metroidvania experience delivered by the development team Team Cherry.
+                 In this journey, players take control of Hornet, the Princess-Protector of Hallownest, who finds herself in the distant kingdom of Pharloom; a world governed by the ancient powers of silk and song. Hornet’s primary goal is to ascend from the depths of this kingdom toward the towering Citadel at the peak to uncover the secrets that threaten this new realm</p>
+  </div>
+</section>
+
+ <section id="the-knight" class="text-image">
+  <img src="hollow-knight-avatar 1.png" alt="The Knight" class="section-img">
+  <div>
+    <h2>The Knight</h2>
+    <p>Hollow Knight: Silksong moves away from the silent Knight of the first installment to present the heroine, Hornet, the Princess-Protector of Hallownest, as the main playable character.
+This new adventure centers entirely on Hornet's agility and power. After being captured and dragged to the strange kingdom of Pharloom, Hornet uses her signature Silk Needle as her primary weapon. Her playstyle is characterized as faster and far more fluid, relying on acrobatic maneuvers, climbing, and dashing to face the unique challenges and creatures in this vertical world full of secrets. Hornet is a true, battle-hardened warrior embarking on a dangerous journey toward the peak to unravel the mysteries and protect the kingdom.</p>
+  </div>
+</section>
+
+<section id="" class="text-image">
+  <img src="XJ7CgSYGvZqaqGdQ8m4w8P 1.png" alt="Graphic Story" class="section-img">
+  <div>
+    <h2>Graphic Story</h2>
+    <p>Hollow Knight: Silksong relies on the beautiful, hand-drawn 2D graphics made famous by the first installment, but with significant improvements in the fluidity and dynamics of movement to suit the fast-paced combat style of the heroine, Hornet. The story begins after Hornet is captured and transported to the mysterious kingdom of Pharloom, and the adventure revolves around an ascent to the Gilded Citadel at the summit, contrasting with the descent of the previous game. Players explore a new world that is more colorful and diverse, filled with new enemies and secrets that unveil the history of Pharloom and the powers of "Silk and Song" that govern it.</p>
+  </div>
+</section>
+
+  <footer>
+    <p>Soo.... What do you think? Try the game now!</p>
+  </footer>
+  <script>
+  const sounds = [
+    "discover.mp3",
+    "hollow.mp3",
+    "spell.mp3"
+  ];
+
+  const btn = document.getElementById("sound");
+
+  btn.addEventListener("click", () => {
+    
+    const randomIndex = Math.floor(Math.random() * sounds.length);
+
+    
+    const audio = new Audio(sounds[randomIndex]);
+    audio.play();
+
+    setTimeout(()=>audio.pause(),3000);
+    
+    
+  });
+</script>
+</body>
+</html>

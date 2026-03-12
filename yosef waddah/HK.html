@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hollow Knight</title>
+  <link rel="stylesheet" href="HK.css">
+</head>
+<body>
+  <header>
+    <img src="Hk/Header with image (1).png" alt="">
+    <h1>Hollow Knight</h1>
+     <Button id="sound">try</Button>
+    <nav>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#the-knight">The Knight</a></li>
+        <li><a href="#graphic-story">Graphic Story</a></li>
+        <li><a href="#play-now">Play Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="introduction" class="text-image">
+  <img src="Hk/hollow-knight-cover-image 1 (1).png" alt="Knight" class="section-img">
+  <div>
+    <h2>Introduction</h2>
+    <p>Set in the vast, dark world of Hallownest, you play as a small, mysterious creature called the Hollow Knight, exploring abandoned ruins, battling strange creatures, and uncovering deep secrets. The game blends exploration, challenging combat, and intricate puzzles within a beautifully interconnected world. Hornet’s primary goal is to ascend from the depths of this kingdom toward the towering Citadel at the peak to uncover the secrets that threaten this new realm</p>
+  </div>
+</section>
+
+ <section id="the-knight" class="text-image">
+  <img src="Hk/hollow-knight-avatar 1 (1).png" alt="The Knight" class="section-img">
+  <div>
+    <h2>The Knight</h2>
+    <p>The Knight is not just a character in a game; he is a symbol of resilience in the face of chaos. With every step he takes through dark tunnels and abandoned temples, the Knight navigates ever-increasing challenges in an attempt to uncover the secrets of the lost kingdom of Hallownest. With each battle he faces, he comes closer to understanding his mysterious fate and the tragedy that has befallen his ancient realm.</p>
+  </div>
+</section>
+
+<section id="" class="text-image">
+  <img src="Hk/XJ7CgSYGvZqaqGdQ8m4w8P 1 (1).png" alt="Graphic Story" class="section-img">
+  <div>
+    <h2>Graphic Story</h2>
+    <p>Hollow Knight captivates players with its hand-drawn artwork, where every corner of the world of Hallownest is filled with enchanting details and dark hues that create a mysterious and beautiful atmosphere at once. Its story is a deep and enigmatic journey, telling the tale of an ancient kingdom full of secrets and challenges, as the player gradually uncovers the fate of Hallownest through the adventure of the silent knight and courageous warrior.</p>
+  </div>
+</section>
+
+  <footer>
+    <p>Soo.... What do you think? Try the game now!</p>
+  </footer>
+  <script>
+  const sounds = [
+    "discover.mp3",
+    "hollow.mp3",
+    "spell.mp3"
+  ];
+
+  const btn = document.getElementById("sound");
+
+  btn.addEventListener("click", () => {
+    
+    const randomIndex = Math.floor(Math.random() * sounds.length);
+
+    
+    const audio = new Audio(sounds[randomIndex]);
+    audio.play();
+
+    setTimeout(()=>audio.pause(),3000);
+    
+    
+  });
+</script>
+</body>
+</html>

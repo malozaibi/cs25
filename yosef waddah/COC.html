@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clash of clans</title>
+  <link rel="stylesheet" href="COC.css">
+</head>
+<body>
+  <header>
+    <img src="COC/Header with image (2).png" alt="">
+    <h1>Clash of clans</h1>
+     <Button id="sound">try</Button>
+    <nav>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#the-Clans">The clans</a></li>
+        <li><a href="#graphic-story">Graphic Story</a></li>
+        <li><a href="#play-now">Play Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="introduction" class="text-image">
+  <img src="COC/Clash-of-Clans-Logo 1.png" alt="Knight" class="section-img">
+  <div>
+    <h2>Introduction</h2>
+    <p>Clash of Clans is one of the most popular mobile strategy games in the world, developed by the Finnish company Supercell and released in 2012. The game is a multiplayer strategy game (MMO Strategy) where players build their own villages, train armies, and attack other players’ villages to collect resources such as gold, elixir, and dark elixir.
+The main idea of the game revolves around resource management, building upgrades, and planning both defensive and offensive strategies, with the opportunity to join Clans to cooperate with other players and participate in Clan Wars to earn significant rewards.</p>
+  </div>
+</section>
+
+ <section id="the-Clans" class="text-image">
+  <img src="COC/466 1.png" alt="The Knight" class="section-img">
+  <div>
+    <h2>The King</h2>
+    <p>He can protect the village from attacks and lead troops during attacks on enemy villages.
+Health and special ability: He has a large health bar, which increases with upgrades. His special ability, "Iron Fist," temporarily boosts his attack power and summons a group of Barbarians to assist him.
+How to use: He can be placed in village defense or taken into battle to support attacking armies. He requires an Altar to be summoned and has a cooldown time after each use.
+Upgrades: The Barbarian King can be upgraded using Gold, which increases his health, damage, and the effectiveness of his special ability.
+In short, the Barbarian King is a symbol of strength and courage in the game and is one of the most important characters for achieving success in attacks and Clan Wars</p>
+  </div>
+</section>
+
+<section id="" class="text-image">
+  <img src="COC/qfvfiG0n 1.png" alt="Graphic Story" class="section-img">
+  <div>
+    <h2>Graphic Story</h2>
+    <p>Clash of Clans features colorful, cartoon-style graphics that are both appealing and easy to follow. The game uses 3D animated characters and buildings with exaggerated, fun designs that make it accessible to all ages. Each unit, building, and spell has a distinct visual style, which helps players quickly identify them during gameplay. The environments, such as villages, forests, and battlefields, are vividly detailed, giving the game a lively and engaging look.
+Story
+While Clash of Clans doesn’t have a traditional linear storyline, it provides a fantasy world setting where players build and manage their own villages. </p>
+  </div>
+</section>
+
+  <footer>
+    <p>Soo.... What do you think? Try the game now!</p>
+  </footer>
+  <script>
+  const sounds = [
+    "clash.mp3" ];
+
+  const btn = document.getElementById("sound");
+
+  btn.addEventListener("click", () => {
+    
+    const randomIndex = Math.floor(Math.random() * sounds.length);
+
+    
+    const audio = new Audio(sounds[randomIndex]);
+    audio.play();
+
+    setTimeout(()=>audio.pause(),5000);
+    
+    
+  });
+</script>
+</body>
+</html>
