@@ -93,8 +93,8 @@
             encodeURI(p.link) +
             '">فتح الموقع</a></div>'
           : "") +
-        // '<p class="mb-1">صور الموقع:</p>'
-        +'<div class="mt-auto d-flex flex-wrap gap-2 image-buttons-container">' +
+        // '<p class="mb-1">صور الموقع:</p>' +
+        '<div class="mt-auto d-flex flex-wrap gap-2 image-buttons-container">' +
         "</div>" +
         "</div>";
 
