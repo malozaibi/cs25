@@ -1,10 +1,10 @@
 :root {
-  --brand: #5aa7ff; /* light blue */
+  --brand: #28a745; /* green */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --brand: #7bb7ff;
+    --brand: #34c759; /* lighter green */
   }
 }
 
@@ -26,8 +26,8 @@ body {
 .btn-primary {
   --bs-btn-bg: var(--brand);
   --bs-btn-border-color: var(--brand);
-  --bs-btn-hover-bg: #3f97ff;
-  --bs-btn-hover-border-color: #3f97ff;
+  --bs-btn-hover-bg: #218838; /* darker green */
+  --bs-btn-hover-border-color: #218838;
 }
 .btn-outline-primary {
   --bs-btn-color: var(--brand);
@@ -37,7 +37,7 @@ body {
 }
 
 .bg-hero {
-  background: linear-gradient(180deg, rgba(90, 167, 255, 0.1), transparent 60%);
+  background: linear-gradient(180deg, rgba(40, 167, 69, 0.1), transparent 60%);
 }
 
 .card-img-top {
