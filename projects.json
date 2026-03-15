@@ -3,9 +3,21 @@
     {
       "slug": "YW",
       "name": "Games Landing pages",
-      "description": " اعداد الطلاب يوسف وضاح، ومحمد انور، ومحمد احمد ",
+      "description": "يوسف وضاح - محمد انور - محمد احمد",
       "link": "/yosef-waddah/HKSS.html",
-      "featureImage": "subdomains/yosef-waddah/Header with image.png",
+      "featureImage": "images/yosef-waddah/Header with image.png",
+      "images": {
+        "desktop": [],
+        "mobile": [],
+        "admin": []
+      }
+    },
+    {
+      "slug": "bmw-cars",
+      "name": "BMW CARS",
+      "description": "إنتظار جلال - لولة عبدالله - رؤى محمد - شمس محمد",
+      "link": "/bmw-cars",
+      "featureImage": "images/bmw/main.jpg",
       "images": {
         "desktop": [],
         "mobile": [],
