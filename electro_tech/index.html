@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--=====Header=====-->
+    <header>
+        <h1>Electro<span>Tech</span></h1>
+        <nav>
+            <a href="#Home">Home</a>
+            <a href="#Services">Services</a>
+            <a href="#Products">Products</a>
+            <a href="#About Us">About Us</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+    </header>
+    <!--=====Hero Section=====-->
+    <section class="hero">
+        <h2>Top Modern Electronic Devices</h2>
+        <p>We offer the latest technology with high quality</p>
+        <button>Browse Products</button>
+    </section>
+    <!--=====Services=====-->
+    <section class="Services">
+        <h2>Our Services</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Device Sales</h3>
+                <p>Phones,laptops,original,accessories</p>
+            </div>
+            <div class="card">
+                <h3>Repairs</h3>
+                <p>Professional repair for all devices</p>
+            </div>
+            <div class="card">
+                <h3>Tech Support</h3>
+                <p>Continuous support & technical consultation</p>
+            </div>
+        </div>
+    </section>
+    <!--=====Porducts=====-->
+    <section class="Porducts">
+        <h2>Our Porducts</h2>
+        <div class="cards">
+            <div class="card">📱Smartphones</div>
+            <div class="card">💻Laptops</div>
+            <div class="card">⌚Smart Watches</div>
+            <div class="card">🎧Headphones</div>
+        </div>
+    </section>
+    <!--=====About=====-->
+    <section class="About Us">
+        <h2>About Us</h2>
+        <p>Electro Tech is a company specialized in providing modern electronic devices with guaranteed quality and
+            after-sale service.</p>
+    </section>
+    <!--=====Works Section=====-->
+    <section class="works">
+        <h2>Our Work</h2>
+        <div class="cards">
+            <div class="card">
+                <a href="Smart-phones.html" target="_blank">
+                <img src="images/photo1.jpg" alt="This my phone"></a>
+                <h3>Smartphones📱</h3>
+                <p> Latest smart phones with high-performance,powerful cameras and long-lesting battery life for daily use.</p>
+           </div>
+            <div class="card">
+                <a href="Smart-Laptops.html" target="_blank">
+                <img src="images/photo2.jpg" alt="This my phone"></a>
+                <h3>Laptops💻</h3>
+                <p>Modern laptops suitable for study,work,and gaming featuring fast processors and sleek desings.</p>
+            </div>
+            <div class="card">
+                <a href="Smart-watches.html" target="_blank">
+                <img src="images/photow2.jpeg" alt="This my phone"></a>
+                <h3>Smart watches⌚</h3>
+                <p>Wiraless smart headphones with noise,cancellation clear sound quality,and comfortable desing.</p>
+            </div>
+        </div>
+    </section>
+    <!--=====Contact=====-->
+    <section class="Contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Email Address">
+            <textarea placeholder="Your Message"></textarea>
+            <button>Send</button>
+        </form>
+    </section>
+    <footer>
+        <p> Salwa Saeed</p>
+        <a href="https://www.linkedin.com/in/salwa-saeed-a7b7933bb"> My LinkedIn</a>
+        <p> Sarah Khaled</p>
+        <a href="https://www.linkedin.com/in/sarah-khaled-08b7a93bb"> My LinkedIn</a>
+        <p> Amal Lotfi</p>
+        <a href="https://www.linkedin.com/in/امل-لطفي-السيد-عمر-9997a63bb"> My LinkedIn</a>
+        <p>©2025 Electro Tech</p>
+    </footer>
+    <script>
+    document.querySelector('.hero button').addEventListener('click', function() {
+      alert('Welcome! Explore our latest electronic products.');
+    });
+
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = form.querySelector('input[type="text"]').value.trim();
+      const email = form.querySelector('input[type="email"]').value.trim();
+      const message = form.querySelector('textarea').value.trim();
+
+      if (!name || !email || !message) {
+        alert('Please fill in all fields.');
+      } else {
+        alert('Thank you! Your message has been sent.');
+        form.reset();
+      }
+    });
+  </script>
+
+</body>
+
+</html>

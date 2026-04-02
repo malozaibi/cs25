@@ -27,7 +27,7 @@
     {
       "slug": "cooking_website",
       "name": "Cooking Website",
-      "description": "علوي عبدالله، احمد جمال، أيمن القرشي، أنس بامفتاح",
+      "description": "علوي عبدالله - احمد جمال - أيمن القرشي - أنس بامفتاح",
       "link": "/cooking_website/code.html",
       "featureImage": "images/cooking_website/main.jpg",
       "images": {
@@ -51,9 +51,21 @@
     {
       "slug": "bean-coffee",
       "name": "Coffee Beans",
-      "description": "رقية أحمد،أصول محمد، سارة وهيب",
+      "description": "رقية أحمد - أصول محمد - سارة وهيب",
       "link": "/bean-coffee/",
       "featureImage": "images/bean-coffee/main.jpg",
+      "images": {
+        "desktop": [],
+        "mobile": [],
+        "admin": []
+      }
+    },
+    {
+      "slug": "electro_tech",
+      "name": "ElectroTech",
+      "description": "امل لطفي - سلوى سعيد - خالد عبدالله",
+      "link": "/electro_tech/",
+      "featureImage": "images/electro_tech/main.jpg",
       "images": {
         "desktop": [],
         "mobile": [],
