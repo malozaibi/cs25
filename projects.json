@@ -35,6 +35,18 @@
         "mobile": [],
         "admin": []
       }
+    },
+    {
+      "slug": "white_space",
+      "name": "White Space",
+      "description": "waiting",
+      "link": "/white_space/",
+      "featureImage": "images/white_space/main.jpg",
+      "images": {
+        "desktop": [],
+        "mobile": [],
+        "admin": []
+      }
     }
   ]
 }
