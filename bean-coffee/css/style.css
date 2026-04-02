@@ -1,0 +1,905 @@
+body {
+    background-color: white;
+    color: #682D03;
+    width: 100%;
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    height: 507px;
+}
+
+#arrow-up {
+    background-color: #F9C06A;
+    color: #682D03;
+    font-size: 1.4em;
+    width: 40px;
+    height: 40px;
+    padding-bottom: 1px;
+    border: none;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 10px;
+    right: -22px;
+    display: none
+}
+
+.shopping-icon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+
+}
+
+#ord-count {
+    position: absolute;
+    bottom: 30px;
+    right: -12px;
+    background-color: #682D03;
+    color: #fff;
+    border-radius: 30px;
+    width: 25px;
+    height: 25px;
+}
+
+#shopping {
+    background-color: #F9C06A;
+    color: #682D03;
+    font-family: playfair display, serif;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 60px;
+    right: -22px;
+    width: 42px;
+    height: 42px;
+    display: none;
+}
+
+#Message-Welcome {
+    position: fixed;
+    border-radius: 10px;
+    right: 1900px;
+    bottom: 270px;
+    width: 42px;
+    height: 42px;
+    transition: 0.5s;
+}
+
+#Message-Welcome.show-message {
+    right: 1500px;
+
+}
+
+.message-icon {
+    width: 400px;
+    height: 140px;
+}
+
+header {
+    background-image: url(../images/coffee_image.png);
+    width: 100%;
+    min-height: 740px;
+    position: relative;
+    background-position-y: 0px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px 0;
+    cursor: grab;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.7));
+
+}
+
+.logo-header, header h1, header button, header nav a, .intro-para, .intro-subtitle {
+    position: relative;
+}
+
+.header_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 20px
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+}
+
+
+nav a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 300;
+    padding: 5px 0;
+}
+
+nav a:hover {
+    cursor: pointer;
+    border-bottom: 1px solid #ffffff;
+}
+
+.logo-header {
+    align-items: flex-start;
+    width: 165px;
+    height: 46px;
+    text-decoration: none;
+    color: white;
+    right: 40px;
+}
+
+.text-logo {
+    font-family: "Clicker Script", cursive;
+    font-size: 35px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.sign {
+    display: flex;
+    gap: 25px;
+    position: relative;
+    right: -50px;
+}
+
+.Sign-in {
+    color: #FFF;
+    align-items: center;
+    position: relative;
+    right: -45px;
+    bottom: -35px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.Sign-in:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.Sing-Up button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+    font-family: "Playfair Display", serif;
+
+}
+
+button {
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: #F9C06A;
+    color: black;
+    border-radius: 35px;
+    padding: 2px;
+    margin: 24px 50px;
+    width: 110px;
+    height: 45px;
+    border: none;
+}
+
+button:hover {
+    background-color: #e0aa59;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding-top: 80px;
+    bottom: -35px;
+    left: 10px;
+
+}
+
+.intro-container {
+    color: #ffffff;
+}
+
+.intro-subtitle {
+    position: relative;
+    top: 35px;
+    font-family: "Playfair Display", serif;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 22px;
+    right: 140px;
+}
+
+.intro-para {
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: -160px;
+    width: 510px;
+    font-weight: lighter;
+    margin-left: 210px;
+    margin-bottom: -10px;
+}
+
+
+h1 {
+    font-family: "Clicker Script", cursive;
+    font-size: 200px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row-reverse;
+    right: 120px;
+    margin-top: 0px;
+
+}
+
+
+.section-main {
+    width: 70%;
+    font-family: "Playfair Display", serif;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 90px 180px;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.section-main h2 {
+    font-size: 54px;
+    font-weight: bold;
+    color: #603809;
+    /* color   x   y  blur */
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+    margin: 0;
+}
+
+.section-main p {
+    width: 590px;
+    color: #707070;
+    font-size: 20px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.Learn-more {
+    text-decoration: none;
+    background-color: #F9C06A;
+    color: black;
+    border-radius: 35px;
+    width: 130px;
+    height: 48px;
+    border: none;
+    font-weight: bold;
+    margin: 0;
+}
+
+.coffee-blast {
+    position: absolute;
+    bottom: -730px;
+    left: 0;
+    width: 430px;
+    height: 270px;
+}
+
+.Products {
+    position: relative;
+    bottom: -25px;
+}
+
+.text-pro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    min-width: 740px;
+}
+
+.text-pro h2 {
+    font-size: 54px;
+    font-weight: bold;
+    color: #603809;
+    margin: 0;
+}
+
+.text-pro p {
+    width: 750px;
+    color: #707070;
+    font-size: 20px;
+    margin: 0;
+    font-weight: 400;
+}
+
+
+.pro-flex {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 0;
+
+}
+
+.pro-card {
+    position: relative;
+    background-color: #FFF9F1;
+    border: 1px solid rgb(249, 192, 106, 42%);
+    box-sizing: border-box;
+    text-align: center;
+    width: 280px;
+    height: 380px;
+    margin: 0;
+}
+
+.pro-card img {
+    width: 100%;
+    display: block;
+}
+
+.pro-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #682D03;
+
+}
+
+.pro-card small {
+    font-family: "Playfair Display", serif;
+    font-size: 1rem;
+    color: #1E1E1E;
+    display: block;
+    padding: 10px 0 0 0;
+    margin-top: -1.9rem;
+}
+
+.pro-card span {
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #682D03;
+    display: block;
+}
+
+.pro-card:hover {
+    transform: scale(1.07);
+    transition: transform 0.7s ease;
+    cursor: pointer;
+}
+
+.button-order {
+    position: absolute;
+    left: 25px;
+    top: 330px;
+    text-decoration: none;
+    background-color: #F9C06A;
+    color: black;
+    border-radius: 35px;
+    width: 130px;
+    height: 48px;
+    font-weight: bold;
+    box-sizing: border-box;
+    font-size: 1rem;
+
+}
+
+.coffee-blast2 {
+    position: absolute;
+    bottom: -1520px;
+    right: 0;
+    width: 430px;
+    height: 270px;
+    transform: scaleX(-1);
+}
+
+.lines {
+    line-height: 5px;
+}
+
+.h2 {
+    font-size: 50px;
+
+}
+
+.h2, .h3 {
+    display: flex;
+    justify-content: center;
+    color: rgb(93, 47, 26);
+}
+
+.h3 {
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.h4 {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: rgb(111, 108, 108);
+}
+
+.iconsa {
+    display: flex;
+    justify-content: center;
+
+}
+
+.icon1 {
+
+    height: 300px;
+    width: 290px;
+    background-color: #ffeed8;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.icont {
+    color: rgb(93, 47, 26);
+    font-size: 25px;
+}
+
+.iconc {
+    color: rgb(111, 108, 108);
+    font-size: 20px;
+}
+
+.icon2, .icon3, .icon4 {
+    height: 300px;
+    width: 290px;
+    background-color: #fff9f1;
+    margin-right: 10px;
+    text-align: center;
+    border: solid rgba(249, 192, 106, 0.42);
+}
+
+.button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.buttonl, .button2 {
+    background-color: #F9C06A;
+    border-radius: 35px;
+    width: 130px;
+    height: 48px;
+    font-weight: bold;
+    box-sizing: border-box;
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding-top: 10px;
+    margin-top: -7px;
+    color: black;
+
+}
+
+.buttonl :active {
+    background-color: bisque;
+}
+
+.buttonl:hover {
+    background-color: rgb(244, 224, 195);
+}
+
+.img115, .img116, .img117, .img118 {
+    padding-top: 20px;
+    height: 55px;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    height: 600px;
+    background-image: url(../images/img121.png);
+    background-repeat: no-repeat;
+
+}
+
+.logo1 {
+    margin-right: 150px;
+
+}
+
+.logoex {
+    margin-top: 150px;
+    margin-left: 100px;
+}
+
+.logoex1 {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: rgb(255, 255, 255);
+}
+
+.logoex2 {
+    margin-left: 30px;
+    margin-top: -40px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+
+}
+
+.button-secound {
+    justify-content: left;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.button2 :active {
+    background-color: bisque;
+}
+
+.button2:hover {
+    background-color: rgb(244, 224, 195);
+}
+
+.section1 h2 {
+    text-align: center;
+    color: #603809;
+    font-family: playfair display, serif;
+    font-size: 54px;
+    font-weight: bold;
+}
+
+.s2 {
+    background-color: #FFF9F1;
+    width: 900px;
+    height: 500px;
+    line-height: 1.5;
+    margin-left: 285px;
+    font-family: playfair display, serif;
+    color: #707070;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.s2 p {
+    text-align: center;
+    font-size: 19px;
+}
+
+.r2 {
+
+    width: 50px;
+    height: 35px;
+    background-repeat: no-repeat;
+    position: relative;
+    right: -197px;
+    bottom: 250px;
+
+}
+
+.r2 button:hover {
+    background-color: #fef4a5;
+    border: #faf9f2 solid 1px;
+
+}
+
+.r2 button {
+    width: 62px;
+    background-color: #F9C06A;
+    border: #F9C06A solid 2px;
+    border-radius: 5px;
+}
+
+.r3 {
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 50px;
+    position: relative;
+    left: -353px;
+    bottom: 285px;
+    float: right;
+
+
+}
+
+.r3 button:hover {
+    background-color: #fef4a5;
+    border: #faf9f2 solid 1px;
+}
+
+
+.r3 button {
+
+    background-color: #F9C06A;
+    border: #F9C06A solid 2px;
+    border-radius: 5px;
+    width: 62px;
+
+
+}
+
+.m1 {
+    position: relative;
+    left: 705px;
+    bottom: 65px;
+
+}
+
+.a1 {
+    position: absolute;
+    bottom: -3018px;
+    right: 0;
+    width: 430px;
+    height: 270px;
+    transform: scalex(-1);
+
+}
+
+.a2 {
+
+    position: absolute;
+    top: 3950px;
+    right: 1090px;
+    width: 430px;
+    height: 270px;
+    transform: scaleY(-1);
+}
+
+.d1 {
+    margin: 20px;
+
+
+}
+
+.text {
+    width: 400px;
+    height: 42px;
+}
+
+.submit {
+    width: 100px;
+    height: 47px;
+    border: #e5c550 solid 1px;
+    position: relative;
+    right: 6px;
+    background-color: #e5c550;
+
+}
+
+.f1 h3 {
+    font-family: playfair display, serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 30px;
+    margin-top: -155px;
+}
+
+.f1 p {
+    font-family: playfair display, serif;
+    color: #707070;
+    font-size: 20px;
+    text-align: center;
+}
+
+.f2 {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../images/coffee-footer.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 70px 20px;
+    position: relative;
+    top: 50px;
+}
+
+
+.f2 h2 {
+    text-align: center;
+    font-family: playfair display, serif;
+    font-size: 40px;
+}
+
+.f2 p {
+    font-family: playfair display, serif;
+    font-size: 16px;
+
+}
+
+.e1 {
+    text-align: center;
+    margin-top: -30px;
+    color: #707070;
+}
+
+form {
+    text-align: center;
+}
+
+
+
+footer {
+    padding: 50px 20px;
+    display: flex;
+    background-color: #3e2c23;
+    color: white;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(39, 4, 4, 0.5)),
+        url('../images/overlay-coffee.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    bottom: 320px;
+    font-family: playfair display, serif;
+    max-height: 100vh;
+}
+
+
+.w5 {
+    width: 1500px;
+    line-height: 25px;
+
+}
+
+
+.w5 h2 {
+    min-width: 200px;
+    width: 10px;
+    font-family: "Clicker Script", cursive;
+    font-weight: normal;
+    font-size: 44px;
+}
+
+
+.w5 pre {
+    font-family: playfair display, serif;
+}
+
+
+.w4 {
+    position: relative;
+    left: 40px;
+    width: 600px;
+    line-height: 37px;
+
+}
+
+ul {
+    list-style: none;
+    position: relative;
+    right: 30px;
+
+}
+
+.w3 {
+    position: relative;
+    left: 70px;
+    width: 570px;
+    line-height: 37px;
+
+
+}
+
+.w2 {
+    position: relative;
+    left: 100px;
+    width: 1000px;
+    line-height: 20px;
+
+}
+
+.t2 {
+    position: relative;
+    left: 930px;
+    bottom: 320px;
+
+}
+
+.t1 {
+    position: relative;
+    right: 40px;
+    bottom: 320px;
+}
+
+.G1 {
+    position: relative;
+    top: 250px;
+    right: 1330px;
+
+}
+
+.div-Team {
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    height: 20px;
+    font-family: "Playfair Display", serif;
+    display: flex;
+    align-items: center;
+
+}
+
+.Team-h {
+    position: relative;
+    font-size: 54px;
+    font-weight: bold;
+    color: #603809;
+    bottom: 270px;
+    margin: 0;
+}
+
+.Team-par {
+    position: relative;
+    color: #707070;
+    font-size: 20px;
+    bottom: 270px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.list-info {
+    position: relative;
+    bottom: 270px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.Link-p {
+    width: 25px;
+    position: relative;
+    top: 4px;
+    left: 30px;
+}
+
+.Link-p2 {
+    width: 25px;
+    position: relative;
+    top: 4px;
+    left: 62px;
+}
+
+.Link-p3 {
+    width: 25px;
+    position: relative;
+    top: 4px;
+    left: 53px;
+}
+
+.Name-T {
+    position: relative;
+    right: 3px;
+}

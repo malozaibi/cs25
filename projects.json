@@ -47,6 +47,18 @@
         "mobile": [],
         "admin": []
       }
+    },
+    {
+      "slug": "bean-coffee",
+      "name": "Coffee Beans",
+      "description": "رقية أحمد،أصول محمد، سارة وهيب",
+      "link": "/bean-coffee/",
+      "featureImage": "images/bean-coffee/main.jpg",
+      "images": {
+        "desktop": [],
+        "mobile": [],
+        "admin": []
+      }
     }
   ]
 }
