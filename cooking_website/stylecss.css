@@ -1,0 +1,250 @@
+.head {
+    display: flex;
+    align-items: center;
+}
+
+        .logo {
+        
+         margin-right: auto;
+         padding: 0 clamp(16px, 5vw, 60px);
+         
+
+}
+
+        .nav_button {
+          
+          padding: 0 clamp(24px, 8vw, 80px);
+          margin-left:auto;
+}
+
+        #book_a_table {
+          background-color: rgb(241, 110, 37);
+          border: none;
+          color: white;
+          padding:10px 32px;
+          font-size: 16px;
+          border-radius: 17px;
+          font-family: 'David Libre', 'Garamond' , 'serif';	
+          margin:10px;
+}
+
+        #menu_button {
+          background-color:black;
+          border: none;
+          color: white;
+          padding:10px 32px;
+          font-size: 16px;
+          border-radius: 17px;
+          font-family: 'David Libre', 'Garamond' , 'serif';	
+          margin:10px;
+}
+
+
+        .nav_up {
+          list-style: none;
+          display: flex;
+          font-family: 'David Libre', 'Garamond' , 'serif';	
+
+}
+
+                  nav ul li {
+                    margin: 5px;
+                  }
+
+                  nav li a {
+                    display: block;
+                    color: rgb(43, 43, 43);
+                    padding: 0.7em;
+
+                  }
+
+                a:visited,
+                a:link{
+                    color: rgb(150, 148, 148);
+                    text-decoration: none;
+                } 
+
+                a:hover {
+                  color:black;
+                  text-decoration:underline;
+                }
+
+
+
+
+#body2 { 
+  background-image: url(./Pics/background2.jpg);
+      background-size: 70vw;
+    
+    background-repeat: no-repeat;
+}
+
+
+#body1 {
+    background-image: url(./Pics/background.jpg);
+    background-size: 70vw;
+
+    background-repeat: no-repeat ;
+}
+
+        .food {
+          display: flex;
+          justify-content: center;
+          align-items: center; 
+         
+}
+        h1 {
+          font-family: 'David Libre', 'Garamond' , 'serif';
+         margin:60px;	
+}
+
+
+
+
+
+
+
+.dishes {
+  display:flex;
+      align-content:center;
+        
+                    justify-content: center;
+
+
+}
+#dish1 {
+  margin-right:3vw;
+  text-align: center;
+  
+
+}
+
+#dish2 {
+  margin-right:3vw;
+  text-align: center;
+}
+
+#dish3 {
+  margin-right:3vw;
+  text-align: center;
+}
+
+#dish4 {
+  margin-right:3vw;
+  text-align: center;
+}
+
+
+
+
+
+.menu{
+  display: flex;
+            justify-content: center;
+
+}
+
+
+
+
+
+.icon {
+  width: 16px;   
+  height: auto;
+}
+
+#cheflist {
+  font-size: 20px;
+  font-weight: lighter; 
+  color:gray;
+list-style: none;
+
+}
+
+
+.input_field {
+  
+  height: 400px;
+  background-image: url(./Pics/tables.png) ;
+  background-size: 70vw;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+
+#input_email {
+  height: 50px;
+  width: 450px;
+  border-radius: 13px;
+    border:none;
+
+  
+}
+
+placeholder {
+  padding: 10px;
+  margin: 15px;
+}
+
+#input_email_button {
+  height: 50px;
+  border-radius: 13px;
+  border:none;
+  background-color:rgb(241, 110, 37) ;
+  color:white;
+  font-family:   'serif';
+  font-weight: 2000;
+
+}
+
+
+
+
+
+.footer {
+    display:flex;
+    align-content:center;
+    
+}
+
+footer {
+  background-color:rgb(243, 244, 244);
+}
+
+footer ul li {
+  padding-bottom:10px;
+}
+
+        .nav_down {
+          list-style: none;
+          padding-left:80px;
+}
+
+        .nav_down_links {
+          margin-left:auto;
+          padding: 0 clamp(16px, 5vw, 60px);
+}
+
+        .the_real_footer {
+          display:flex;
+          align-content:center;
+}
+
+        .terms {
+            
+          margin-right: auto;
+            
+
+}
+
+        .rights {
+            
+          margin-right: auto;
+          padding: 0 clamp(16px, 5vw, 60px);
+}

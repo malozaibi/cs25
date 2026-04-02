@@ -23,6 +23,18 @@
         "mobile": [],
         "admin": []
       }
+    },
+    {
+      "slug": "cooking_website",
+      "name": "Cooking Website",
+      "description": "علوي عبدالله، احمد جمال، أيمن القرشي، أنس بامفتاح",
+      "link": "/cooking_website/code.html",
+      "featureImage": "images/cooking_website/main.jpg",
+      "images": {
+        "desktop": [],
+        "mobile": [],
+        "admin": []
+      }
     }
   ]
 }
