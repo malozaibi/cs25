@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="admin.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <div>
+        <h3>International Hotel - Receptionist </h3>
+        <small class="smallTitle">Welcome back, Receptionist</small>
+      </div>
+      <button class="logoutBtn" type="button" onclick="logout()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 17L21 12L16 7" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M21 12H9" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M12 21H5C3.895 21 3 20.105 3 19V5C3 3.895 3.895 3 5 3H12" stroke="#111" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        Logout
+      </button>
+    </div>
+  </header>
+
+  <div class="tabs">
+    <button class="tab" onclick="switchTab('guests',this)">Guests</button>
+    <button class="tab" onclick="switchTab('rooms',this)">Rooms</button>
+    <button class="tab" onclick="switchTab('pricing',this)">Pricing</button>
+  </div>
+
+  <div>
+    <div id="guests" class="content">
+
+      <div class="content-container">
+        <div class="guests-header">
+          <h2>Guest Management</h2>
+          <button id="btnNew" class="btnCheckin">
+            <svg viewBox="0 0 24 24" class="btn-icon">
+              <path
+                d="M15 14c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM4 20v-1c0-2.21 3.58-4 8-4s8 1.79 8 4v1H4zM2 8h4M4 6v4"
+                stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            New Check-In
+          </button>
+        </div>
+
+
+        <!--------TABLE-START-------->
+        <div class="table-card">
+          <table class="guests-table">
+            <thead>
+              <tr>
+                <th>Guest Name</th>
+                <th>Contact</th>
+                <th>Room</th>
+                <th>Check-in</th>
+                <th>Check-out</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="guestsBody">
+              <tr>
+                <td>Ahmed Abood</td>
+                <td>+1234567890</td>
+                <td>Deluxe - Neema</td>
+                <td>2024-01-15</td>
+                <td>2024-01-20</td>
+                <td><span class="badge">READY FOR-CHECKOUT</span></td>
+                <td class="actions">
+                  <button class="btn-sm edit" onclick="openEditForm(this.closest('tr'))">Edit</button>
+                  <span class="fake-btn">Checkout</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Hussien Abdullah</td>
+                <td>+1987654321</td>
+                <td>Executive - Baraka</td>
+                <td>2024-01-18</td>
+                <td>2024-01-22</td>
+                <td><span class="badge ready">READY FOR-CHECKOUT</span></td>
+                <td class="actions">
+                  <button class="btn-sm edit" onclick="openEditForm(this.closest('tr'))">Edit</button>
+                  <span class="fake-btn">Checkout</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!--------TABLE-END-------->
+
+      <!----------------MODAL DIALOG---------------->
+      <div id="guestModal" class="modal hidden">
+        <div class="modal-card">
+          <div class="modal-header">
+            <p id="modalTitle">Guest Check-In Form</p>
+          </div>
+
+          <form id="guestForm" class="modal-form" novalidate>
+            <div class="form-row">
+              <label>Full Name *</label>
+              <input type="text" id="fullName" required />
+            </div>
+
+            <div class="form-row">
+              <label>Contact Number *</label>
+              <input type="text" id="contact" required />
+            </div>
+
+            <div class="form-row">
+              <label>Room *</label>
+              <input type="text" id="room" placeholder="e.g. Deluxe - Neema" required />
+            </div>
+
+            <div class="form-row">
+              <label>Check-in Date *</label>
+              <input type="date" id="checkin" required />
+            </div>
+
+            <div class="form-row">
+              <label>Check-out Date *</label>
+              <input type="date" id="checkout" required />
+            </div>
+
+            <div class="modal-actions">
+              <button type="button" id="cancelBtn" class="btn-outline">Cancel</button>
+              <button type="submit" id="submitBtn" class="btnCheckin">Check In</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div><!-- Guests panel end -->
+
+    <div id="rooms" class="content hidden">
+      <div class="content-container flex-col-container">
+        <div class="flex-row-container flex-justify-space-between big-bottom-margin flex-align-center">
+          <div>
+            <h2>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-bed w-6 h-6" aria-hidden="true">
+                <path d="M2 4v16"></path>
+                <path d="M2 8h18a2 2 0 0 1 2 2v10"></path>
+                <path d="M2 17h20"></path>
+                <path d="M6 8v9"></path>
+              </svg>
+              Room Management
+            </h2>
+            <span class="smallTitle">Manage all rooms and their details</span>
+          </div>
+          <button id="btnAddRoom" class="btnCheckin" type="button">
+            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-plus w-4 h-4 mr-2" aria-hidden="true">
+              <path d="M5 12h14"></path>
+              <path d="M12 5v14"></path>
+            </svg>
+            Add Room
+          </button>
+        </div>
+
+        <div class="grid grid-4-col gap-1 big-bottom-margin">
+
+          <div class="overview-card2 content-card-height">
+            <div class="card-header2">
+              <h4>Available Rooms</h4>
+            </div>
+            <div class="card-content">
+              <div class="card-value text-green">1</div>
+            </div>
+          </div>
+
+          <div class="overview-card2 content-card-height">
+            <div class="card-header2">
+              <h4>Occupied Rooms</h4>
+            </div>
+            <div class="card-content">
+              <div class="card-value text-red">1</div>
+            </div>
+          </div>
+
+          <div class="overview-card2 content-card-height">
+            <div class="card-header2">
+              <h4>Maintenance</h4>
+            </div>
+            <div class="card-content">
+              <div class="card-value text-yellow">1</div>
+            </div>
+          </div>
+
+          <div class="overview-card2 content-card-height">
+            <div class="card-header2">
+              <h4>Total Rooms</h4>
+            </div>
+            <div class="card-content">
+              <div class="card-value">3</div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="ROOOOOMS">
+
+          <div class="table-card">
+            <h4 class="card-header2" style="padding-left: 13px;">All Rooms</h4>
+            <table class="guests-table">
+              <thead>
+                <tr>
+                  <th>Room Label</th>
+                  <th>Location</th>
+                  <th>Type</th>
+                  <th>Status</th>
+                  <th>Capacity</th>
+                  <th>Beds</th>
+                  <th>Area(sq ft)</th>
+                  <th style="width: 323.875px;">Amenities</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="roomBody">
+                <tr>
+                  <td>N-D-001</td>
+                  <td><svg style="margin-right: 6px;" xmlns="http://www.w3.org/2000/svg" width="10.5" height="10.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin w-3 h-3" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>Neema</td>
+                  <td>Deluxe</td>
+                  <td>
+                    <div class="btn-sm black-background extra-small-padding">Available</div>
+                  </td>
+                  <td>4</td>
+                  <td>2</td>
+                  <td>450</td>
+                  <td class="flex-row-container flex-justify-start wrap gap-0">
+                    <div class="overview-card small-card-padding"><span class="small-card-title">wifi</span></div>
+                    <div class="overview-card small-card-padding"><span class="small-card-title">tv</span></div>
+                    <div class="overview-card small-card-padding"><span class="small-card-title">phone</span></div>
+                    <div class="overview-card small-card-padding"><span class="small-card-title">fridge</span></div>
+                    <div class="overview-card small-card-padding"><span class="small-card-title">balcony</span></div>
+                    <div class="overview-card small-card-padding"><span class="small-card-title">parking</span></div>
+                    <div class="overview-card small-card-padding"><span class="small-card-title">iron Board</span></div>
+                    <div class="overview-card small-card-padding"><span class="small-card-title">tea Coffee Tray</span></div>
+                  </td>
+                  <td>
+                    <button class="btn-sm gray-hover small-side-padding edit"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="14" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-pen w-3 h-3"
+                        aria-hidden="true">
+                        <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path
+                          d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z">
+                        </path>
+                      </svg></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>B-E-001</td>
+                  <td><svg style="margin-right: 6px;" xmlns="http://www.w3.org/2000/svg" width="10.5" height="10.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin w-3 h-3" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>Baraka</td>
+                  <td>Executive</td>
+                  <td>
+                    <div class="btn-sm red-background extra-small-padding">Occupied</div>
+                  </td>
+                  <td>2</td>
+                  <td>1</td>
+                  <td>600</td>
+                  <td class="flex-row-container flex-justify-start wrap gap-0">
+                    <div class="overview-card small-card-padding"><span class="small-card-title">wifi</span></div>
+                    <div class="overview-card small-card-padding"><span class="small-card-title">tv</span></div>
+                    <div class="overview-card small-card-padding"><span class="small-card-title">phone</span></div>
+                  </td>
+                  <td>
+                    <button class="btn-sm gray-hover small-side-padding edit"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="14" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-pen w-3 h-3"
+                        aria-hidden="true">
+                        <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path
+                          d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z">
+                        </path>
+                      </svg></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div><!-- Rooms panel end -->
+
+
+
+    <!------------------ROOM-MODAL-------------------------->
+      <div id="roomModal" class="modal hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <p id="roomModalTitle">Add New Room</p>
+      </div>
+
+      <form id="roomForm" class="modal-form room-form" novalidate>
+        <div class="form-grid">
+          <div class="form-row">
+            <label>Location *</label>
+            <select id="r_location" required>
+              <option value="">Select</option>
+              <option>Neema</option>
+              <option>Baraka</option>
+              <option>Jedda</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label>Room Type *</label>
+            <select id="r_type" required>
+              <option value="">Select</option>
+              <option>Budget</option>
+              <option>Deluxe</option>
+              <option>Executive</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label>Room Label *</label>
+            <input id="r_label" type="text" placeholder="e.g., N-D-001" required />
+          </div>
+
+          <div class="form-row">
+            <label>Status *</label>
+            <select id="r_status" required>
+              <option>Available</option>
+              <option>Occupied</option>
+              <option>Maintenance</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label>Max Capacity *</label>
+            <input id="r_capacity" type="number" min="1" required />
+          </div>
+
+          <div class="form-row">
+            <label>Number of Beds *</label>
+            <input id="r_beds" type="number" min="1" required />
+          </div>
+
+          <div class="form-row">
+            <label>Area (sq ft) *</label>
+            <input id="r_area" type="number" min="1" required />
+          </div>
+
+          <div class="form-row col-span-2">
+            <label>Amenities</label>
+            <div class="amenities-grid">
+              <label><input type="checkbox" value="wifi" /> wifi</label>
+              <label><input type="checkbox" value="tv" /> tv</label>
+              <label><input type="checkbox" value="phone" /> phone</label>
+              <label><input type="checkbox" value="fridge" /> fridge</label>
+              <label><input type="checkbox" value="balcony" /> balcony</label>
+              <label><input type="checkbox" value="parking" /> parking</label>
+              <label><input type="checkbox" value="iron Board" /> iron Board</label>
+              <label><input type="checkbox" value="tea Coffee Tray" /> tea Coffee Tray</label>
+              <label><input type="checkbox" value="kitchenette" /> kitchenette</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" id="cancelRoomBtn" class="btn-outline">Cancel</button>
+          <button type="submit" id="submitRoomBtn" class="btnCheckin">Add Room</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+    <!------------------ROOM-MODAL-END---------------------->
+    <div id="pricing" class="content hidden">
+      <div class="content-container flex-col-container">
+        <div class="flex-row-container flex-justify-space-between flex-align-center big-bottom-margin">
+          <div>
+            <h2>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-dollar-sign w-6 h-6" aria-hidden="true">
+                <line x1="12" x2="12" y1="2" y2="22"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+              Room Pricing Management
+            </h2>
+            <span class="smallTitle">Set flexible pricing for different seasons, room types, and guest categories</span>
+          </div>
+          <button class="btnCheckin" id="priceaddnewbtn" type="button">
+            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-plus w-4 h-4 mr-2" aria-hidden="true">
+              <path d="M5 12h14"></path>
+              <path d="M12 5v14"></path>
+            </svg>
+            Add Pricing Rule
+          </button>
+        </div>
+
+
+
+        <!----------GRID-START------------>
+        <div class="grid grid-4-col gap-1 big-bottom-margin">
+
+          <div class="overview-card2 content-card-height">
+            <div class="card-header2">
+              <h4>Total Pricing Rules</h4>
+            </div>
+            <div class="card-content">
+              <div class="card-value">3</div>
+            </div>
+          </div>
+
+          <div class="overview-card2 content-card-height">
+            <div class="card-header2">
+              <h4>Peak Season Rules</h4>
+            </div>
+            <div class="card-content">
+              <div class="card-value text-red">2</div>
+            </div>
+          </div>
+
+          <div class="overview-card2 content-card-height">
+            <div class="card-header2">
+              <h4>Off-Peak Rules</h4>
+            </div>
+            <div class="card-content">
+              <div class="card-value text-green">1</div>
+            </div>
+          </div>
+
+          <div class="overview-card2 content-card-height">
+            <div class="card-header2">
+              <h4>Average Price</h4>
+            </div>
+            <div class="card-content">
+              <div class="card-value">$120</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!----------GRID-END--------------->
+
+        <!--------TABLE-START-------->
+        <div class="table-card big-bottom-margin">
+          <table class="guests-table">
+            <thead>
+              <tr>
+                <th>Period</th>
+                <th>Season</th>
+                <th>Room Type</th>
+                <th>Package</th>
+                <th>Occupancy</th>
+                <th>Citizen Price</th>
+                <th>Non-Citizen Price</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="pricebody">
+              <tr>
+                <td><svg style="margin-right: 6px;" xmlns="http://www.w3.org/2000/svg" width="10.5" height="10.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-3 h-3" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>January 2024</td>
+                <td><div class="btn-sm red-background no-padding"><small>Peak</small></div></td>
+                <td>Deluxe</td>
+                <td>BB (Bed & Breakfast)</td>
+                <td>2</td>
+                <td>$100</td>
+                <td>$150</td>
+                <td class="actions">
+                    <button class="btn-sm gray-hover small-side-padding edit price-edit"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="14" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-pen w-3 h-3"
+                        aria-hidden="true">
+                        <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path
+                          d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z">
+                        </path>
+                      </svg></button>
+                  <button class="btn-sm gray-hover small-side-padding edit cancel-price-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x w-3 h-3" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--------TABLE-END-------->
+
+        <div class="overview-card2 content-data-container full-width big-bottom-margin">
+          <h4 class="card-header2">Pricing Summary by Room Type</h4>
+          <div class="card-content">
+            <!----------GRID-START------------>
+            <div class="grid grid-4-col gap-1">
+
+              <div class="overview-card2 content-card-height flex-stop-justify-space-between">
+                <div class="card-header2">
+                  <h4>Budget</h4>
+                </div>
+                <div class="card-content">
+                  <div class="flex-row-container flex-justify-space-between small-bottom-margin">
+                    <h4>Rules:</h4>
+                    <h4>0</h4>
+                  </div>
+                  <div class="flex-row-container flex-justify-space-between small-bottom-margin">
+                    <h4>Avg Citizen:</h4>
+                    <h4>$0</h4>
+                  </div>
+                  <div class="flex-row-container flex-justify-space-between small-bottom-margin">
+                    <h4>Avg Non-Citizen:</h4>
+                    <h4>$0</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="overview-card2 content-card-height flex-stop-justify-space-between">
+                <div class="card-header2">
+                  <h4>Standard</h4>
+                </div>
+                <div class="card-content">
+                  <div class="flex-row-container flex-justify-space-between small-bottom-margin">
+                    <h4>Rules:</h4>
+                    <h4>1</h4>
+                  </div>
+                  <div class="flex-row-container flex-justify-space-between small-bottom-margin">
+                    <h4>Avg Citizen:</h4>
+                    <h4>$60</h4>
+                  </div>
+                  <div class="flex-row-container flex-justify-space-between small-bottom-margin">
+                    <h4>Avg Non-Citizen:</h4>
+                    <h4>$80</h4>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="overview-card2 content-card-height flex-stop-justify-space-between">
+                <div class="card-header2">
+                  <h4>Deluxe</h4>
+                </div>
+                <div class="card-content">
+                  <div class="flex-row-container flex-justify-space-between small-bottom-margin">
+                    <h4>Rules:</h4>
+                    <h4>1</h4>
+                  </div>
+                  <div class="flex-row-container flex-justify-space-between small-bottom-margin">
+                    <h4>Avg Citizen:</h4>
+                    <h4>$120</h4>
+                  </div>
+                  <div class="flex-row-container flex-justify-space-between small-bottom-margin">
+                    <h4>Avg Non-Citizen:</h4>
+                    <h4>$160</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="overview-card2 content-card-height flex-stop-justify-space-between">
+                <div class="card-header2">
+                  <h4>Executive</h4>
+                </div>
+                <div class="card-content">
+                  <div class="flex-row-container flex-justify-space-between small-bottom-margin">
+                    <h4>Rules:</h4>
+                    <h4>1</h4>
+                  </div>
+                  <div class="flex-row-container flex-justify-space-between small-bottom-margin">
+                    <h4>Avg Citizen:</h4>
+                    <h4>$180</h4>
+                  </div>
+                  <div class="flex-row-container flex-justify-space-between small-bottom-margin">
+                    <h4>Avg Non-Citizen:</h4>
+                    <h4>$240</h4>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!----------GRID-END--------------->
+
+
+              <!------------------ROOM-MODAL-------------------------->
+      <div id="pricingmodal" class="modal hidden">
+        <div class="modal-card">
+          <div class="modal-header">
+            <p id="pricingmodaltitle">Add New Pricing Rule</p>
+          </div>
+
+          <h3 class="big-bottom-margin"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-4 h-4" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg> Time Period</h3>
+
+          <form id="pricingform" class="modal-form room-form" novalidate>
+            <div class="grid grid-3-col gap-4 big-bottom-margin">
+              <div class="form-row">
+                <label>Month *</label>
+                <select id="p_month" required>
+                  <option>January</option>
+                  <option>February</option>
+                  <option>March</option>
+                  <option>April</option>
+                  <option>May</option>
+                  <option>June</option>
+                  <option>July</option>
+                  <option>August</option>
+                  <option>September</option>
+                  <option>October</option>
+                  <option>November</option>
+                  <option>December</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label>Year *</label>
+                <select id="p_year" required>
+                  <option>2024</option>
+                  <option>2025</option>
+                  <option>2026</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label>Season *</label>
+                <select id="p_season" required>
+                  <option>off-Peak</option>
+                  <option>Peak</option>
+                </select>
+              </div>
+            </div>
+
+            <hr class="big-bottom-margin">
+            <h3 class="big-bottom-margin">Room Configuration</h3>
+
+            <div class="grid grid-3-col gap-4 big-bottom-margin">
+              <div class="form-row">
+                <label>Room Type *</label>
+                <select id="p_roomtype" required>
+                  <option>Budget</option>
+                  <option>Standard</option>
+                  <option>Deluxe</option>
+                  <option>Executive</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label>Package Type *</label>
+                <select id="p_package" required>
+                  <option>BO (Bed Only)</option>
+                  <option>BB (Bed & Breakfast)</option>
+                  <option>HB (Half Board)</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label>Occupancy *</label>
+                <select id="p_occupancy" required>
+                  <option>Single</option>
+                  <option>Double</option>
+                </select>
+              </div>
+            </div>
+
+            <hr class="big-bottom-margin">
+            <h3 class="big-bottom-margin">Pricing</h3>
+
+            <div class="grid grid-2-col gap-4 big-bottom-margin">
+              <div class="form-row">
+                <label>Citizen Price ($) *</label>
+                <input id="p_citizen_price" type="number" min="1" required />
+              </div>
+
+              <div class="form-row">
+                <label>Non-Citizen Price ($) *</label>
+                <input id="p_non_citizen_price" type="number" min="1" required />
+              </div>
+            </div>
+
+            <div class="modal-actions grid grid-2-col gap-4">
+              <button type="submit" id="submitpricingBtn" class="btnCheckin flex-justify-center"><svg  xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-save w-4 h-4 mr-2" aria-hidden="true"><path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"></path><path d="M7 3v4a1 1 0 0 0 1 1h7"></path></svg>Add Pricing Rule</button>
+              <button type="button" id="cancelpricingBtn" class="btn-outline">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!------------------ROOM-MODAL-END---------------------->
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+      </div>
+    </div><!-- Pricing panel end -->
+
+
+
+
+  </div>
+
+
+  </div>
+
+
+
+
+  <script src="scriptAdmen.js"></script>
+</body>
+
+</html>

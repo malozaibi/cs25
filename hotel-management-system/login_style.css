@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 14px;
+    background-color: #ECF3FF;
+    margin:120px;
+}
+.loginform{
+    height: 446.9px;
+    width: 380px;
+    background-color: white;
+    border-radius: 10px;
+}
+.header{
+    padding:10.5px;
+}
+.hotel-icon{
+    margin: 15px;
+    width: 49px;
+    height: 49px;
+    stroke: white;
+    background-color: #155DFC;
+    padding:10px;
+    border-style:hidden;
+    border-radius: 100%;
+}
+.flex-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flex-row-start{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:normal;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.text-center{
+    text-align: center;
+}
+
+h4{
+    margin: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+small{
+    color: #717182;
+    font-size: 14px;
+}
+
+form{
+    margin-top: 10px;
+    align-items: center;
+}
+label{
+    font-size: 0.8rem;
+    font-weight: 500;
+    width: 348px;
+    height: 12px;
+}
+.input-box-next-to-icon{
+    width: 321px; 
+    height: 20px;
+    border-width: 0px;
+    background-color: transparent;
+    font-size: 0.8rem;
+    outline: none;
+}
+.input-icon{
+    width: 15px;
+    height: 19px;
+    margin-top: 1.5px;
+    stroke: #717182;
+}
+.input-box{
+    width: 341px;
+    height: 30px;
+    background-color: #F3F3F5;
+    border-width: 0.8px;
+    border-radius: 8px;
+    border-color: #F3F3F5;
+    margin-bottom: 14px;
+    padding:5px 8.5px;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+.input-box:focus-within{
+    outline: 2px solid #9a9aa9; 
+}
+select, button, input{
+    display: block;
+    padding:5px 10.5px;
+}
+button{
+    width: 341px;
+    height: 30px;
+    background-color: oklch(.546 .245 262.881);
+    color: white;
+    font-size: 0.8rem;
+    border-width: 0px;
+    border-radius: 5px;
+}
+button:hover {
+  filter: brightness(0.95);
+}
+
+select, select::picker(select) {
+  appearance: base-select;
+  font-size: .875rem;
+}
+select::picker-icon {
+    color: #afa4a4; 
+    font-size: 0.78rem;
+}
+select:focus {
+    outline: 2px solid #9a9aa9; 
+}
+
+select option {
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+}
+
+select option:hover {
+  background-color: #E9EBEF;
+  color: black;
+}
+select option::checkmark {
+    color:#757586;
+    font-size: 0.58rem;
+}
+
