@@ -1,0 +1,114 @@
+
+
+ .why-us-section {
+   background-color: #e9edf3;
+     padding: 60px 20px; 
+    text-align: center;
+    
+ }
+  .why-us-section h2  { 
+    font-size: 36px;
+     color: #333;
+      margin-bottom: 50px; 
+}
+   .features-container {
+     display: flex; 
+    justify-content: space-between;
+     gap: 30px;
+      flex-wrap: wrap;
+ }
+   
+   .feature-card {
+     background-color: white;
+     width: 220px;
+      padding: 25px;
+       border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s,box-shadow 0.3s;
+ }
+
+.feature-card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0,0, 0.1);
+}
+    .feature-card i { 
+        background-color: #1abc9c; 
+         color: white;
+          width: 60px;
+           height: 60px;
+            border-radius: 50%;
+             display: flex;
+              align-items: center;
+              justify-content: center;
+               font-size: 28px;
+               margin: 0 auto 15px; 
+            } 
+    .feature-card h3 { font-size: 20px;
+         color: #1abc9c;
+          margin-bottom: 10px;
+     }
+     .feature-card p { font-size: 15px;
+         color:#666 ; 
+         line-height: 1.6; 
+        }
+
+.reviews {
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.reviews h2 {
+  font-size: 36px;
+  color: #1f1f1f;
+  margin-bottom: 50px;
+}
+
+.reviews-holder {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.box {
+  background-color: #f1efef;
+  width: 300px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: left; 
+  transition: transform 0.3s , box-shadow 0.3s;
+}
+
+.box:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0,0, 0.1);
+}
+
+.box .stars {
+  color: #f39c12;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.box .text {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.box .name {
+  font-size: 17px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.box .city {
+  font-size: 14px;
+  color: #777;
+  margin: 0;
+}

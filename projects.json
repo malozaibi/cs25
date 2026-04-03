@@ -39,7 +39,7 @@
     {
       "slug": "white_space",
       "name": "White Space",
-      "description": "waiting",
+      "description": "حورية أحمد - آية خالد - ابرار محمد",
       "link": "/white_space/",
       "featureImage": "images/white_space/main.jpg",
       "images": {
@@ -66,6 +66,30 @@
       "description": "امل لطفي - سلوى سعيد - خالد عبدالله",
       "link": "/electro_tech/",
       "featureImage": "images/electro_tech/main.jpg",
+      "images": {
+        "desktop": [],
+        "mobile": [],
+        "admin": []
+      }
+    },
+    {
+      "slug": "hotel-management-system",
+      "name": "Hotel Management System",
+      "description": "حسين عبدالله - احمد عبود - ناصر عبداللطيف",
+      "link": "/hotel-management-system/login.html",
+      "featureImage": "images/hotel-management-system/main.jpg",
+      "images": {
+        "desktop": [],
+        "mobile": [],
+        "admin": []
+      }
+    },
+    {
+      "slug": "luxury_cars",
+      "name": "Luxury Cars",
+      "description": "سارة خالد - ليلى حسين - دلال عبداللطيف",
+      "link": "/luxury_cars/interface.html",
+      "featureImage": "images/luxury_cars/main.jpg",
       "images": {
         "desktop": [],
         "mobile": [],

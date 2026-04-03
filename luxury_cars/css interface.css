@@ -1,0 +1,676 @@
+.pageone {
+    width: 1358px;
+    height: 900px;
+    padding-right: 10px;
+    background-image: url(interface2h.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+body {
+    margin-left: 0px;
+
+    overflow-x: hidden;
+    
+}
+
+.interface {
+    text-align: center;
+    font-size: 70px;
+    color: white;
+    position: relative;
+    top: 150px;
+}
+
+.paragraph {
+    text-align: center;
+    font-size: 24px;
+    position: relative;
+    top: 130px;
+    color: white;
+}
+
+header ul {
+    position: relative;
+    width: 1340px;
+    height: 0px;
+    right: 50px;
+    align-items: center;
+    background-color: rgb(253, 253, 253);
+    display: flex;
+    align-items: center;
+    gap:80px;
+    list-style: none;
+    font-size: 20px;
+    padding:25px  30px;
+
+}
+
+
+nav a {
+    margin: 0px 13px;
+    text-decoration: none;
+    color: black;
+}
+
+.IvCars {
+    color: #10742c;
+    font-size: 40px;
+    font-weight: bolder;
+    position: relative;
+    left: 60px;
+}
+.call {
+    border: solid 1px #10742c;
+    border-radius: 7px;
+    height: 30px;
+    width: 60px;
+    text-align: center;
+}
+.one-button {
+    background-color: #10742c;
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0px solid #10742c;
+    color: white;
+    position: relative;
+    top: 150px;
+    left: 450px;
+}
+
+.one-button:hover {
+    box-shadow: 0px 0px 12px #27a54b ;
+    background-color: #27a54b;
+}
+
+.two-button {
+    background-color: white;
+    color: white;
+    border-radius: 10px;
+    border: 0px solid white;
+    width: 200px;
+    height: 40px;
+    position: relative;
+    top: 150px;
+    left: 470px;
+}
+
+.two-button:hover {
+    background-color: #10742c;
+        box-shadow: 0px 0px 12px #27a54b ;
+
+}
+
+.h1-find {
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+    bottom: 80px;
+}
+
+.page2 {
+    border-radius: 10px;
+    width: 640px;
+    height: 100px;
+    padding: 40px;
+    border: 0px solid black;
+    box-shadow: 1px 1px 10px rgb(165, 164, 164);
+    position: relative;
+    left: 320px;
+    bottom: 60px;
+    color:#363535;
+    text-transform:capitalize ;
+    font-size: 14px;
+
+}
+
+
+select {
+    background-color:#e4e7e8;
+    border: 0px solid #bfc3c4;
+    border-radius: 7px;
+    color: #666;
+    width: 180px;
+    height: 30px;
+    position: relative;
+    top:6px;
+        padding-left: 10px;
+
+}
+
+.Price1 {
+    position: relative;
+    right: 230px;
+    bottom: 48px;
+    float: right;
+}
+
+.Transmission1 {
+    position: relative;
+    left: 450px;
+    float: left;
+    bottom: 48px;
+}
+
+.search {
+    position: relative;
+    color:white;
+    top: 35px;
+    left: 70px;
+    width: 130px;
+    height: 34px;
+    background-color: #10742c;
+    border-radius: 10px;
+    border: 0px solid wheat;
+}
+
+.search:hover{
+     box-shadow: 0px 0px 12px #27a54b ;
+    background-color: #10742c;
+
+}
+
+.call:hover {
+    background-color: #10742c;
+}
+
+.watsAAp {
+    background-color: #10742c;
+    border-radius: 7px;
+    text-align: center;
+    width: 120px;
+    height: 30px;
+    color: white;
+}
+
+.watsAAp:hover {
+    background-color: #65bd7e ;
+
+}
+
+.PopularCars {
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+    bottom: 150px;
+}
+.WidthPage3{
+    height: 900px;
+}
+
+.Audi {
+    display: flex;
+    gap: 30px;
+    text-align: left;
+    position: relative;
+    right: 80px;
+    bottom: 160px;
+    border-radius: 20px;
+    float: right;
+    width: 400px;
+    height: 450px;
+    margin:0  auto;
+}
+.divAudi{
+    box-shadow: 0px 0px 1px rgb(162, 157, 157),-0px -0px 1px rgb(151, 148, 148);
+    width: 349px;
+}
+
+.buttom-whatsaap {
+    background-color: #10742c;
+    border-radius: 8px;
+    border: 0px solid black;
+    width: 255px;
+    height: 40px;
+    position: relative;
+    top: 20px;
+    left: 30px;
+    color: white;
+}
+.buttom-whatsaap:hover{
+    background-color:#08c85e;
+}
+.all {
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    float: right;
+    position: relative;
+    bottom: 190px;
+    right: 20px;
+    background-color: #10742c;
+    border-radius: 20px;
+    width: 70px;
+    height: 24px;
+}
+
+.why-us-section {
+    background-color:#e8f5e8;
+    padding: 60px 20px;
+    width: 1300px;
+    text-align: center;
+}
+
+.why-us-section h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background-color: white;
+    width: 220px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px   rgba(36, 35, 35, 0.678);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(15, 15, 15, 0.507);
+}
+
+.feature-card i {
+    background-color: #054e32;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 15px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    color: #1abc9c;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.reviews {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 36px;
+    color: #1f1f1f;
+    margin-bottom: 50px;
+}
+
+.reviews-holder {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.box {
+    background-color: #f1efef;
+    width: 300px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(15, 15, 15, 0.678);
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(19, 19, 19, 0.596);
+}
+
+.box .stars {
+    color: #f39c12;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.box .text {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.box .name {
+    font-size: 17px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.box .city {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+}
+
+.car {
+    background-color: rgb(249, 249, 249);
+
+}
+
+.redcar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row-reverse;
+
+}
+
+.img {
+    border-radius: 4%;
+    height: 350px;
+    width: 530px;
+    margin: 50px;
+    margin-top: 70px;
+    margin-left: 10px;
+    margin-right: 100px;
+}
+
+.ll {
+    margin: 20px;
+}
+
+p {
+    color: rgb(69, 72, 75);
+    line-height: 1.7;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.li {
+    gap: 20px;
+    display: flex;
+}
+
+.li h2 {
+    color: #175c36;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    line-height: 1;
+    letter-spacing: 0px;
+}
+
+.li span {
+    color: rgb(69, 72, 75);
+    font-size: 14px;
+}
+
+.oo {
+    margin-left: 140px;
+    text-align: center;
+    font-size: larger;
+}
+
+.kk {
+    text-align: center;
+    margin-left: 70px;
+    font-size: larger;
+}
+
+.h1 h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.h1_ContactUs{
+text-align: center;
+position: relative;
+left: 350px;
+bottom: 10px;
+}
+
+.Googlemap {
+    background: rgb(255, 255, 255);
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    width: 300px;
+    padding-right: 200px;
+    display: flex;
+    padding-bottom: 12px;
+    align-items: center;
+    gap: 4px;
+    margin-top: 20px;
+    margin-left: 90px;
+}
+
+.google {
+    margin: 10px;
+}
+
+.map h4 {
+    margin: 0px;
+    font-weight: 500;
+    color: black;
+}
+
+.map {
+    color: rgb(102, 104, 107);
+    
+}
+
+.dis {
+    display: flex;
+}
+
+.Googlemap img {
+    border-radius: 50px;
+    width: 68px;
+    height: 66px;
+    margin-top: 2px;
+}
+
+.imgh img {
+    border-radius: 4%;
+    height: 350px;
+    width: 530px;
+    margin-left: 90px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    margin-top: 88px;
+}
+
+.link a {
+    background-color: rgb(0, 98, 0);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 300px;
+    padding-right: 200px;
+    display: flex;
+    padding-bottom: 12px;
+    padding-top: 5px;
+    gap: 4px;
+    margin-left: 90px;
+    margin-top: 20px;
+    justify-content: center;
+    justify-content: right;
+    font-size: small;
+    font-weight: 300px;
+}
+
+.link a:hover {
+    background-color: #08c85e;
+}
+
+footer {
+    width: 1358px;
+    background-color: #0f1723;
+    color:white;
+    height: 400px;
+    width:1200px;
+    display: flex;
+    padding:  170px;
+    padding-top:80px;
+
+
+}
+   ul li ,a {
+    list-style: none;
+    line-height: 30px;
+    color: #aea8a8;
+    text-decoration: none;
+}
+.footer1 h2{
+color:#27a54b;
+position: relative;
+top: 20px;
+left: 30px;
+}
+.footer1{
+    line-height: 30px;
+    color: #aea8a8;
+    font-size: 15px;
+
+}
+.footer3{
+float: right;
+position: relative;
+right: 50px;
+bottom: 555px;
+color: white;
+}
+.footer3 h2{
+    position: relative;
+    left: 30px;
+}
+ hr{
+    position: relative;
+    bottom: 300px;
+    left: 170px;
+    width: 1000px;
+ }
+  .small-one{
+     position: relative;
+    bottom: 260px;
+    left: 9px;
+    color: white;
+  }
+  
+  .small-two{
+     position: relative;
+    bottom: 305px;
+    left: 700px;
+    color: white;
+    float: left;
+  } 
+  a:hover{
+    color:#27a54b;
+  }
+  .logosarah {
+    float: left;
+    position: relative;
+    bottom: 400px;
+    left: 177px;
+  }
+  .teambody{
+    background-color:white;
+    position:relative ;
+    bottom: 350px;
+    width: 1398px;
+    height: 200px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-team img{
+    width:150px;
+  }
+   
+
+   
+  .team1,.team2,.team3{
+    border-radius: 150px;
+    width: 300px;
+    background-color: #eaeaed;
+    height: 380px;
+    text-align: center;
+    position: relative;
+    top: 200px;
+  }
+  .team1:hover,.team2:hover,.team3:hover{
+    box-shadow:9px 9px 20px rgb(2, 2, 22) ;
+  }
+    .s,.d,.l{
+    position: relative;
+    top: 280px;
+    }
+    #id-team1:hover{
+        animation-name:dalal;
+        animation-timing-function: ease;
+        animation-duration: 1s;
+    }
+    @keyframes dalal{
+        0%{
+            transform: translate(0,0);
+
+        }
+        50%{
+            transform: translate(0,-70px);
+
+        }
+        100%{
+            transform: translate(0,0);
+
+        }
+    }
+    #id-team2:hover{
+        animation-name:sarah;
+        animation-timing-function: ease;
+        animation-duration: 1s;
+    }
+    @keyframes sarah{
+        0%{
+            transform: translate(0,0);
+
+        }
+        50%{
+            transform: translate(0,-70px);
+
+        }
+        100%{
+            transform: translate(0,0);
+
+        }
+    }
+    #id-team3:hover{
+        animation-name:laila;
+        animation-timing-function: ease;
+        animation-duration: 1s;
+    }
+    @keyframes laila{
+        0%{
+            transform: translate(0,0);
+
+        }
+        50%{
+            transform: translate(0,-70px);
+
+        }
+        100%{
+            transform: translate(0,0);
+
+        }
+    }

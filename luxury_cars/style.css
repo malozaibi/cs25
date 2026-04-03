@@ -1,0 +1,154 @@
+                        body {
+                            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                            margin: 0;
+                        }
+                        
+                        .car {
+                            background-color: rgb(249, 249, 249);
+                        }
+                        
+                        .redcar {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            flex-direction: row-reverse;
+                        }
+                        
+                        .img {
+                            border-radius: 4%;
+                            height: 350px;
+                            width: 530px;
+                            object-fit: cover;
+                            margin: 50px;
+                            margin-top: 70px;
+                            margin-left: 10px;
+                            margin-right: 100px;
+                        }
+                        
+                        .ll {
+                            text-align: left;
+                            margin: 20px;
+                        }
+                        
+                        p {
+                            color: rgb(69, 72, 75);
+                            line-height: 1.7;
+                            font-family: Arial, Helvetica, sans-serif;
+                        }
+                        
+                        .li {
+                            display: grid;
+                            grid-template-columns: repeat(2, 1 fr);
+                            gap: 20px;
+                            display: flex;
+                        }
+                        
+                        .li h2 {
+                            color: #175c36;
+                            text-align: center;
+                            margin-top: 15px;
+                            margin-bottom: 5px;
+                            line-height: 1;
+                            letter-spacing: 0px;
+                        }
+                        
+                        .li span {
+                            color: rgb(69, 72, 75);
+                            font-size: 14px;
+                        }
+                        
+                        .oo {
+                            margin-left: 140px;
+                            text-align: center;
+                            font-size: larger;
+                        }
+                        
+                        .kk {
+                            text-align: center;
+                            margin-left: 70px;
+                            font-size: larger;
+                        }
+                        
+                        .h1 h1 {
+                            text-align: center;
+                            margin-bottom: 10px;
+                        }
+                        
+                        .Googlemap {
+                            background: rgb(255, 255, 255);
+                            border: 1px solid #e0e0e0;
+                            border-radius: 15px;
+                            width: 300px;
+                            padding-right: 200px;
+                            display: flex;
+                            padding-bottom: 12px;
+                            align-items: center;
+                            gap: 4px;
+                            margin-top: 20px;
+                            margin-left: 90px;
+                        }
+                        
+                        .google {
+                            margin: 10px;
+                        }
+                        
+                        .map h4 {
+                            margin: 0px;
+                            font-weight: 500;
+                            color: black;
+                        }
+                        
+                        .map {
+                            color: rgb(102, 104, 107);
+                        }
+                        
+                        .dis {
+                            display: flex;
+                        }
+                        
+                        .Googlemap img {
+                            border-radius: 50px;
+                            width: 68px;
+                            height: 66px;
+                            margin-top: 2px;
+                        }
+                        
+                        .imgh img {
+                            border-radius: 4%;
+                            height: 350px;
+                            width: 530px;
+                            margin-left: 30px;
+                            margin-right: 100px;
+                            margin-bottom: 50px;
+                            margin-top: 25px;
+                        }
+                        
+                        .link a {
+                            background-color: rgb(0, 98, 0);
+                            color: #ffffff;
+                            text-decoration: none;
+                            border-radius: 10px;
+                            width: 300px;
+                            padding-right: 200px;
+                            display: flex;
+                            padding-bottom: 12px;
+                            padding-top: 5px;
+                            gap: 4px;
+                            margin-left: 90px;
+                            margin-top: 20px;
+                            justify-content: center;
+                            justify-content: right;
+                            font-size: small;
+                            font-weight: 300px;
+                        }
+                        
+                        .link a:hover {
+                            background-color: #08c85e;
+                        }
+                        
+                        .footer {
+                            background-color: #0f1723;
+                            color: #e0e0e0;
+                            padding-bottom: 220px;
+                        }
+                        
