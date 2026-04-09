@@ -1,206 +1,149 @@
 <!DOCTYPE html>
-<html lang="ltr">
- <head>
-<meta charset="utf-8">
-<meta name="viewport"Contact="width=deice-width,initial-scale=1.0">
-<title>Rent Luxury Cars</title>
-<link rel="stylesheet" href="css interface.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IV Cars</title>
 
-    </head>
-    <body> 
-        <div id="home"  class="pageone"> 
-        <header>
-            <nav>
-                <ul>
-                    <li><span class="IvCars">  IV Cars</span></li>
-                    <li><a href="#home"> Home</a></li>
-                     <li><a href="#car"> cars</a></li>
-                    <li><a href="#about"> About</a></li>
-                    <li><a href="#contact"> contact</a></li>
-                     <li> <button style="background-color: #10742c; border: solid 0px #10742c; width:43px;height:36px; border-radius:6px;position: relative;left:10px;font-size: 14px; color:white;font-weight: bolder;">En</button>
-                    <button style="background-color: white;width:43px;height:36px; border: solid 1px rgb(203, 198, 198); border-radius:6px;font-size: 14px;">Ar</button></li>
-                    <li class="call"><a href="https://wa.me/773256638">call</a></li>
-                    <li class="watsAAp"><a href="https://wa.me/773256638" style="color:white ;font-size:14px; text-align: center;"> WatsApp</a></li>
-                </ul>
-            </nav>
-             </header>
-<h1 class="interface"> Rent Luxury Cars in Dubai</h1>
-<p class="paragraph"> Experience the best car rental service in Dubai with our premium <br> of luxury vehicles.
-</p>
- <a href="#car"> <button class="one-button"> View Cars </button></a>
- <a href="https://wa.me/773266738"> <button class="two-button"> WatsApp us</button>
- </div></a>
+  <link rel="stylesheet" href="css interface.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
 
+<body>
 
+<header>
+  <nav>
+    <ul>
+      <li class="IvCars">IV Cars</li>
+
+      <li><a href="#home">Home</a></li>
+      <li><a href="#cars">Cars</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+
+      <li>
+        <button class="lang active" style="background-color: white; width: 40px; height: 40px; border-radius: 8px;" >EN</button>
+        <button class="lang" style="background-color: #10742c ;color:white;  width: 40px; height: 40px; border-radius: 8px;" >AR</button>
+      </li>
+
+      <li class="call"><a href="https://wa.me/773256638">Call</a></li>
+      <li class="whatsapp"><a href="https://wa.me/773256638">WhatsApp</a></li>
+    </ul>
+  </nav>
+</header>
 
 
-<h1 class=" h1-find"> Find Your Perfect Car</h1>
-<div class="page2"> 
- <form >
-    <div  class="car11"> 
-   <label  for="car"> car brand</label><br>
-   <select id="car" >
-    <option > All Brands</option>
-    <option value="Mercedes">Mercedes</option>
-    <option value="BMW"> BMW</option>
-    <option value="Audi"> Audi</option>
-    <option value="Lexus"> Lexus</option>
-    <option value="Porsche"> Porsche</option>
-    <option value="ferrari"> ferrari</option>
-    <option value="Lamborghini"> Lamborghini</option>
-</select>
-</div>
+<section id="home" class="pageone">
+  <h1 class="interface">Rent Luxury Cars in Dubai</h1>
 
-<div class="Price1"> 
-<label  for="Price"> Price Range</label><br>
-<select id="Price">
-    <option> All prices</option>
-    <option value="100-300"> 100-300 AED</option>
-    <option value="300-500"> 300-500 AED</option>
-    <option value="500-1000"> 500-1000 AED</option>
-    <option value="1000+"> 1000+</option>
-</select>
-</div>
-<div class="Transmission1"  > 
-<label  for="Transmission"> Transmission</label><br>
-<select id="Transmissions">
-    <option > All Types</option>
-    <option value="Automatic"> Automatic</option>
-    <option value="Manual">Manual </option>
-</select> 
-</div>
-       </form>
+  <p class="paragraph">
+    Experience the best car rental service in Dubai with our premium luxury vehicles.
+  </p>
 
-<button onclick="filterCars()" class="search" >Search Cars</button>
-<h3 id="result" style="text-align:center;position: relative;top:90px;color: #10742c;"></h3>
-</div>
-</div><br><br><br><br><br><br><br><br><br><br><br><br>
-<div >
+  <div class="buttons">
+    <a href="#cars"><button class="one-button">View Cars</button></a>
+    <a href="https://wa.me/773266738"><button class="two-button">WhatsApp Us</button></a>
+  </div>
+</section>
 
 
+<section class="search-section">
+  <h1>Find Your Perfect Car</h1>
 
-<div class="WidthPage3"> 
-    <h1 id="car" class="PopularCars" > Popular Cars</h1>
-    
-    <div  class="Audi"> 
-    <figure class="divAudi">
-         <img  src="Audi.jpg" width="350px" height="200px">
-         <div class="all"> Audi</div>
-        <figcaption ><h3> Audi A8</h3>  <br>
-             <span style=" color:green ;
-             font-weight: bolder;
-             font-size: 25px;" > 700 AED</span> 
-             <small style=" position: relative; left:180px;color: rgb(126, 129, 129);">  per day</small>
-</figcaption>
-    <br>
-    <small style="color:  rgb(126, 129, 129)"> Automatic
-</small>
- <a href="https://wa.me/773266738"><button class="buttom-whatsaap" style="position: relative;left: -18px;top: 38px;"> Contact via WhatsApp</button>
-</a>
-</figure>
+  <div class="page2">
+    <form>
+      <select id="car">
+        <option value="all">All Brands</option>
+        <option>Mercedes</option>
+        <option>BMW</option>
+        <option>Audi</option>
+        <option>Lexus</option>
+        <option>Porsche</option>
+        <option>Ferrari</option>
+      </select>
+
+      <select id="Price">
+        <option value="all">All Prices</option>
+        <option value="100-300">100-300</option>
+        <option value="300-500">300-500</option>
+        <option value="500-1000">500-1000</option>
+        <option value="1000+">1000+</option>
+      </select>
+
+      <select id="Transmissions">
+        <option value="all">All Types</option>
+        <option>Automatic</option>
+        <option>Manual</option>
+      </select>
+    </form>
+
+    <button onclick="filterCars()" class="search">Search</button>
+    <h3 id="result"></h3>
+  </div>
+</section>
+
+<!-- 🔹 CARS -->
+<section id="cars" class="cars-section">
+  <h1>Popular Cars</h1>
+
+  <div class="cars-container">
+
+    <!-- CAR -->
+    <div class="car-card">
+      <img src="Audi.jpg">
+      <h3>Audi A8</h3>
+      <p>700 AED / day</p>
+      <small>Automatic</small>
+      <a href="#77090865"><button>WhatsApp</button></a>
     </div>
 
-    <div  class="Audi"> 
-    <figure class="divAudi">
-         <img  src="BMW.jpg" width="350px" height="200px">
-                  <div class="all">BMW</div>
+    <div class="car-card">
+      <img src="BMW.jpg">
+      <h3>BMW X7</h3>
+      <p>750 AED / day</p>
+      <small>Automatic</small>
+       <a href="#77090865"><button>WhatsApp</button></a>
 
-        <figcaption ><h3> BMW X7</h3>  <br>
-             <span style=" color:green ;
-             font-weight: bolder;
-             font-size: 25px;" > 750 AED</span> 
-             <small style=" position: relative; left:180px;color: rgb(126, 129, 129);">  per day</small>
-</figcaption>
-    <br>
-    <small style="color:  rgb(126, 129, 129)"> Automatic
-</small>
-<br>
- <a href="https://wa.me/773266738"> <button class="buttom-whatsaap"> Contact via WhatsApp</button>
- </a>
-
-</figure>
-    </div>
-    
-    <div  class="Audi"> 
-    <figure class="divAudi">
-         <img  src="Mercedes S-Class.jpg" width="350px" height="200px">
-        <div class="all">Mercedes</div>
-
-        <figcaption ><h3> Mercedes S-Class</h3>  <br>
-             <span style=" color:green ;
-             font-weight: bolder;
-             font-size: 25px;" > 800 AED</span> 
-             <small style=" position: relative; left:180px;color: rgb(142, 145, 145);">  per day</small>
-</figcaption>
-    <br>
-    <small style="color: rgb(126, 129, 129)"> Automatic
-</small>
-<br><a href="https://wa.me/773662738"> <button class="buttom-whatsaap"> Contact via WhatsApp</button>
-</a> 
-
-</figure>
-    </div>
-<div  class="Audi"> 
-    <figure class="divAudi">
-         <img  src="Ferrari 488.jpg" width="350px" height="200px">
-                 <div class="all">Ferrari</div>
-
-        <figcaption ><h3> Ferrari 488</h3>  <br>
-             <span style=" color:green ;
-             font-weight: bolder;
-             font-size: 25px;" > 2500 AED</span> 
-             <small style=" position: relative; left:180px;color: rgb(142, 145, 145);">  per day</small>
-</figcaption>
-    <br>
-    <small style="color: rgb(126, 129, 129)"> Automatic
-</small>
-<br> <a href="https://wa.me/776652738"> <button class="buttom-whatsaap"> Contact via WhatsApp</button>
-</a>
-</figure>
     </div>
 
-    <div  class="Audi"> 
-    <figure class="divAudi">
-         <img  src="Lexus LS.jpg" width="350px" height="200px">
-         <div class="all">Lexus</div>
+    <div class="car-card">
+      <img src="Mercedes S-Class.jpg">
+      <h3>Mercedes S-Class</h3>
+      <p>800 AED / day</p>
+      <small>Automatic</small>
+       <a href="#77090865"><button>WhatsApp</button></a>
 
-        <figcaption ><h3> Lexus LS</h3>  <br>
-             <span style=" color:green ;
-             font-weight: bolder;
-             font-size: 25px;" > 650 AED</span> 
-             <small style=" position: relative; left:180px;color: rgb(142, 145, 145);">  per day</small>
-</figcaption>
-    <br>
-    <small style="color: rgb(126, 129, 129)"> Automatic
-</small>
-<br> <a href="https://wa.me/773256638"><button class="buttom-whatsaap"> Contact via WhatsApp</button>
- </a>
-</figure>
     </div>
-    
+<div class="car-card">
+      <img src="Ferrari 488.jpg">
+      <h3>Ferrari488 </h3>
+      <p>800 AED / day</p>
+      <small>Automatic</small>
+            <a href="#77090865"><button>WhatsApp</button></a>
 
-<div  class="Audi"> 
-    <figure class="divAudi">
-         <img  src="Porsche 911.jpg" width="350px" height="200px">
-         <div class="all">Lexus</div>
-
-        <figcaption ><h3> Porsche 911</h3>  <br>
-             <span style=" color:green ;
-             font-weight: bolder;
-             font-size: 25px;" > 1200 AED</span> 
-             <small style=" position: relative; left:180px;color: rgb(142, 145, 145);">  per day</small>
-</figcaption>
-    <br>
-    <small style="color:  rgb(126, 129, 129)"> Automatic
-</small><br>
- <a href="https://wa.me/773256638"> <button class="buttom-whatsaap"> Contact via WhatsApp</button>
- </a>
-
-</figure>
     </div>
-</div>
-</div>
+<div class="car-card">
+      <img src="Lexus LS.jpg">
+      <h3>Lexus LS</h3>
+      <p>800 AED / day</p>
+      <small>Automatic</small>
+            <a href="#77090865"><button>WhatsApp</button></a>
+
+    </div>
+<div class="car-card">
+      <img src="Porsche 911.jpg">
+      <h3>Porsche 911</h3>
+      <p>800 AED / day</p>
+      <small>Automatic</small>
+            <a href="#77090865"><button>WhatsApp</button></a>
+
+    </div>
+
+
+
+  </div>
+</section>
+
 <div class="why-us-section" id="">
   <h2>Why Choose IV Cars?</h2>
 
@@ -350,39 +293,48 @@
         <div class="imgh"> <img src="laila.png" alt="map"></div>
 
     </div>
-    <footer>
-           <div class="footer1">
-            <h2 >IV Cars</h2>
-            <p><pre>  
-    Dubai's premier car rental service offering luxury vehicles 
-    and exceptional customer service since 2010.
-</pre>
-             </p>
-            </div>
-        <div class="footer2"></div> 
-        <ul>
-            <h2>Quick Links </h2>
-            <li> <a href="#home"> Home</a></li>
-             <li> <a href="#car"> Cars</a></li>
-            <li> <a href="#about"> About</a></li>
-             <li> <a href="#contact"> contact</a></li>
-        </ul>
-        </div>
-        <div class="footer3"> 
-      <h2>Contact Us </h2>
-      <ul> 
-        <li> +971 50 123 4567</li>
-        <li> info@ivcars.ae</li>
-        <li> +971 50 123 4567</li>
-        <li>Sheikh Zayed Road, Dubai, UAE</li>
-      </ul>
-        </div>
-<hr>
-     <div class=" logosarah"> <img  src="logo.jpg"></div>
+    <!-- HTML -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h2>IV Cars</h2>
+      <p>Dubai’s premier car rental service offering luxury vehicles and exceptional customer service since 2010.</p>
+      <div class="social-icons">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
 
-<div class="small-one"> <small> &copy;2024 IV Cars. All rights reserved.</small></div>
-<smal class="small-two"> <a href="#home"> <pre> Terms of Service        Privacy Policy</pre> </a></smal>
-    </footer>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+       
+      <li><a href="#home">Home</a></li>
+      <li><a href="#cars">Cars</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>📞 +971 50 123 4567</p>
+      <p>✉️ info@ivcars.ae</p>
+      <p>📍 Sheikh Zayed Road, Dubai, UAE</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>©2024 IV Cars. All rights reserved.</p>
+    <div class="footer-policy">
+      <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+</footer> 
+
 
   <div class="teambody">
     <div class="team1" id="id-team1">
@@ -413,7 +365,7 @@
      </div>
       </div>
 </div>
-        <script>
+ <script>
   const cars = [
     {brand: "Mercedes", price: 800, transmission: "Automatic"},
     {brand: "BMW", price: 7500, transmission: "Manual"},
